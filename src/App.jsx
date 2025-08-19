@@ -89,7 +89,7 @@ export default function App() {
         <UserLight onCaptured={() => { setConsoleFullscreen(true); setConsoleOpen(true); setCapturedSignal(true) }} />
         <AstralWireframes />
         <EnergyRibbons />
-        <Sparkles count={500} size={2.5} speed={0.12} opacity={0.6} color={PALETTE.wire} scale={[20, 20, 20]} />
+        <Sparkles count={1000} size={2.5} speed={0.12} opacity={0.6} color={PALETTE.wire} scale={[40, 40, 40]} />
         <Effects sunRef={sunRef} />
       </Canvas>
 
@@ -147,7 +147,7 @@ function UserLight({ onCaptured }) {
   const auraMat = useRef(null)
   const ring = useRef(null)
 
-  const pos = useRef(new THREE.Vector3(2, -20.0, 40))
+  const pos = useRef(new THREE.Vector3(2, -20.0, 30))
   const vel = useRef(new THREE.Vector3())
   const lastMoveDir = useRef(new THREE.Vector3(0, 0, -1))
   const lookDir = useRef(new THREE.Vector3(0, 0, -1))
@@ -166,7 +166,7 @@ function UserLight({ onCaptured }) {
 
   // camera feel
   const BASE_HEIGHT = 3.8
-  const BASE_BACK   = 25.6
+  const BASE_BACK   = 10.6
   const MAX_HEIGHT  = 6.2
   const MAX_BACK    = 8.8
 
